@@ -6,10 +6,13 @@ CLI temperature and fuel consumption converter developed with unit testing
 
 # Help
 
--h displays this message
+-h
+displays this message = '-h' ;
 
--t c|f|k,c|f|k \<value\> temperature conversion
+-t
+temperature conversion = '-t' 'c'|'f'|'k','c'|'f'|'k' value ; 
 
--fc mpg|l100km,mpg|l100km \<value\> fuel consumption conversion
+-fc
+fuel consumption conversion = '-fc' 'mpg'|'l100km','mpg'|'l100km' value ; 
 
 example: python unit_converter.py -t cc -40
