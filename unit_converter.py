@@ -1,4 +1,3 @@
-from ast import arg
 from sys import argv
 
 # Required for Testing (comparing floats)
