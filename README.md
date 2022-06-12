@@ -13,6 +13,6 @@ displays this message = '-h' ;
 temperature conversion = '-t' 'c'|'f'|'k','c'|'f'|'k' value ; 
 
 -fc<br />
-fuel consumption conversion = '-fc' 'mpg'|'l100km','mpg'|'l100km' value ; 
+fuel consumption conversion = '-fc' 'uk_mpg'|'us_mpg'|'l100km','uk_mpg'|'us_mpg'|'l100km' value ; 
 
 example: python unit_converter.py -t cc -40
