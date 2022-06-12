@@ -2,7 +2,7 @@
 
 CLI temperature and fuel consumption converter developed with unit testing
 
-(MPG US is used for fuel consumption)
+Sub 0K temperatures are not flagged as erronous or corrected
 
 # Help
 
