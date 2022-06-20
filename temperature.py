@@ -44,36 +44,50 @@ def t_KtoF(k_temp):
 def t_KtoK(k_temp):
     return float(format(k_temp,".2f"))
 
+temp_func_map = {
+    "fc":t_FtoC,
+    "fk":t_FtoK,
+    "ff":t_FtoF,
+
+    "kf":t_KtoF,
+    "kc":t_KtoC,
+    "kk":t_KtoK,
+
+    "cf":t_CtoF,
+    "ck":t_CtoK,
+    "cc":t_CtoC
+}
+
 # temperature conversion tests
 def temp_test():
     print("Temps")
     print("from to input_v true_v test_v")
 
     print("f c -40 -40",t_FtoC(-40))
-    assert_almost_equal_float( t_FtoC(-40), -40 )
+    assert_almost_equal_float( temp_func_map.get("fc")(-40), -40 )
 
     print("f k -40 233.15",t_FtoK(-40))
-    assert_almost_equal_float( t_FtoK(-40), 233.15 )
+    assert_almost_equal_float( temp_func_map.get("fk")(-40), 233.15 )
     
     print("f f 0 0",t_FtoF(0))
-    assert_almost_equal_float(t_FtoF(0),0)
+    assert_almost_equal_float( temp_func_map.get("ff")(0), 0 )
 
 
     print("k c 0 -273.15",t_KtoC(0))
-    assert_almost_equal_float( t_KtoC(0), -273.15 )
+    assert_almost_equal_float( temp_func_map.get("kc")(0), -273.15 )
 
     print("k f 0 -459.67",t_KtoF(0))
-    assert_almost_equal_float( t_KtoF(0), -459.67 )
+    assert_almost_equal_float( temp_func_map.get("kf")(0), -459.67 )
 
     print("k k 0 0", t_KtoK(0))
-    assert_almost_equal_float(t_KtoK(0),0)
+    assert_almost_equal_float( temp_func_map.get("kk")(0), 0 )
     
 
     print("c f -40 -40", t_CtoF(-40))
-    assert_almost_equal_float( t_CtoF(-40), -40 )
+    assert_almost_equal_float( temp_func_map.get("cf")(-40), -40 )
 
     print("c k 0 273.15",t_CtoK(0))
-    assert_almost_equal_float( t_CtoK(0), 273.15 )
+    assert_almost_equal_float( temp_func_map.get("ck")(0), 273.15 )
 
     print("c c 0 0", t_CtoC(0))
-    assert_almost_equal_float(t_CtoC(0),0)
+    assert_almost_equal_float( temp_func_map.get("cc")(0), 0 )
