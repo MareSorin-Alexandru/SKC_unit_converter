@@ -9,10 +9,10 @@ Sub 0K temperatures are not flagged as erronous or corrected
 -h<br />
 displays this message = '-h' ;
 
--t<br />
-temperature conversion = '-t' 'c'|'f'|'k','c'|'f'|'k' value ; 
+t_ ...<br />
+temperature conversion = 't_','c'|'f'|'k','c'|'f'|'k' value ; 
 
--fc<br />
-fuel consumption conversion = '-fc' 'uk_mpg'|'us_mpg'|'l100km','uk_mpg'|'us_mpg'|'l100km' value ; 
+fc_ ...<br />
+fuel consumption conversion = 'fc_','uk_mpg'|'us_mpg'|'l100km','uk_mpg'|'us_mpg'|'l100km' value ; 
 
-example: python unit_converter.py -t cc -40
+example: python unit_converter.py t_cc -40
